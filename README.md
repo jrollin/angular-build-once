@@ -2,6 +2,12 @@
 
 How to manage multiple deployments with the same Build
 
+## Example 
+
+App deployed on Github pages with custom env : `envName` and `apiUrl` 
+
+![](./angular_build_once.png)
+
 
 ## Installation
 
@@ -32,5 +38,17 @@ npm run build
 
 ## Deploy
 
-@todo : Gitlab pages
+
+Use `gh-pages` node module to deploy to github pages
+
+
+```shell
+npm run deploy:gh
+```
+
+To customize application `name` and `api URL`, we replaced `/dist/env.js` by `/deploy/github.env.js`
+
+
+
+
 
