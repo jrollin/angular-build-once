@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cd-env-angular'`, () => {
+  it(`should have as title 'Continuous Delivery with environnements'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cd-env-angular');
+    expect(app.title).toEqual('Continuous Delivery with environnements');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cd-env-angular app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Your app is running!');
   });
 });
