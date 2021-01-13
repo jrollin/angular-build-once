@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cd-env-angular": {
+    "angular-build-once": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cd-env-angular",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cd-env-angular:build"
+            "browserTarget": "angular-build-once:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cd-env-angular:build:production"
+              "browserTarget": "angular-build-once:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cd-env-angular:build"
+            "browserTarget": "angular-build-once:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cd-env-angular:serve"
+            "devServerTarget": "angular-build-once:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cd-env-angular:serve:production"
+              "devServerTarget": "angular-build-once:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "cd-env-angular"
+  "defaultProject": "angular-build-once"
 }
